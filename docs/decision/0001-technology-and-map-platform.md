@@ -1,16 +1,20 @@
-﻿# Decision 0001: technology and map platform
+﻿# Decision 0001: prototype technology and map platform
 
-- **Status:** Open
+- **Status:** Accepted for prototype
 - **Date:** 2026-10-25
 
 ## Context
 
-The README lists candidate technologies for the frontend, map, backend, database, and deployment, but leaves the final choice open.
+The project needs a working end-to-end demonstration before authorized campus maps and room data are available. The original README proposed several possible technologies without selecting them.
 
 ## Decision
 
-No technologies or map platform selected yet.
+Use React, TypeScript, and Vite for the static frontend prototype, with a structured TypeScript campus catalog and custom SVG schematic map. Do not add a backend or database until persistent administration is needed. The schematic maps and sample destinations are demonstrative only. No NU floor plan, room coordinate, or walking route is claimed as real.
 
-## Next step
+## Rationale
 
-Compare candidates against kiosk browser/hardware support, offline needs, touch accessibility, map-data formats and licensing, team familiarity, and maintainability. Record selected options here after review.
+This supports campus selection, search, floor selection, map interaction, destination details, and route-preview states without making map-provider or backend assumptions. The map renderer, directory data, and route-preview logic are separate so each can be replaced with authorized information later.
+
+## Revisit when
+
+The team confirms target kiosk hardware, authorized map formats and licenses, offline requirements, accessibility routing data, and whether campus-data editing needs a backend.

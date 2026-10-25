@@ -1,11 +1,8 @@
-﻿# Onboarding
+﻿# BarkTrack prototype onboarding
 
-1. Read the [README](../README.md), [project overview](project_overview.md), and [architecture notes](architecture.md).
-2. Check the [roadmap](roadmap.md) and existing task proposals.
-3. Before relying on a room list or map, check its source, authorization, date, and coverage. Clearly label fictional fixture data.
-4. Record unresolved technology, mapping, and data-source choices in `docs/decision/`.
-5. Keep instructions current and describe what was actually verified.
-
-## Current status
-
-Only the project README and planning scaffold exist. There is no application runtime selected or runnable yet. See [LOCAL_PREVIEW.md](../LOCAL_PREVIEW.md).
+1. Read the [project README](../README.md), [overview](project_overview.md), and [architecture](architecture.md).
+2. Use `cd frontend; npm install; npm run dev` to start the local kiosk prototype.
+3. Review the structured sample directory in `data/campuses.ts`, interface and map renderer in `frontend/src/`, map geometry helpers in `map/`, and route logic in `routing/` before changing navigation behavior.
+4. Never present sample indoor floor plans, buildings, room positions, or routes as verified campus information. Outdoor routes remain unavailable until entrances and walking data are verified.
+5. Review [the official location source notes](reports/official-location-source-review.md) before modifying real-world location details.
+6. Record changes to technical decisions, map sources, data handling, or route behavior in the relevant documentation.

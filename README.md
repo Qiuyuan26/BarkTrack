@@ -1,135 +1,43 @@
-# 🐶 BarkTrack
-### The NU Bulldog Campus Navigation System
+﻿# BarkTrack — Find Your Way Around NU
 
-**BarkTrack** is an interactive campus map kiosk designed to help students, faculty, staff, and visitors navigate the National University (NU) campus. Inspired by NU's Bulldog mascot, BarkTrack provides a convenient way to locate buildings, classrooms, laboratories, offices, and other campus facilities.
+BarkTrack is an independent student project prototype for a self-service campus navigation kiosk. It is designed to help students, faculty, staff, visitors, and first-time guests explore NU Main, NU Mendiola, NU Annex 1, and NU Annex 2.
 
-With its interactive map and room-search functionality, BarkTrack aims to make campus navigation easier, faster, and more accessible, especially for freshmen and visitors unfamiliar with the university layout.
+> **Prototype data notice:** Indoor maps, buildings, rooms, floors, and sample routes are illustrative content. They are not official NU campus information and must not be used for real-world navigation. Replace them only with authorized, verified campus data.
 
-> **Tagline:** Sniff Out Your Destination.
+## Current prototype
 
----
+The interactive frontend demonstrates the visitor journey:
 
-## 📌 Project Overview
+- Landing page with two paths: **Find a Room** and **Navigate Between Buildings**.
+- Indoor selection for NU Main, NU Annex 1, and NU Annex 2, plus campus-scoped sample destination search. NU Mendiola is not shown as an indoor campus card.
+- NU Main, NU Annex 1, and NU Annex 2 open to random interactive sample 1st-floor plans, with seven distinct floor layouts, separate room directories, selectable destinations, and highlighted sample paths with step-by-step guidance. All layouts and routes are fictional, not real NU plans.
+- Building and destination detail panels, plus clearly illustrative indoor route previews.
+- Outdoor trip form for NU Main, NU Mendiola, and NU Annex 2 (Mendiola), with origin/destination swapping.
+- Destination location information, optional sample indoor room selection, and a connected indoor-guide handoff.
+- An explicit unavailable-route state. No outdoor line, distance, time, street names, or steps are shown without verified route and entrance data.
+- Helpful empty states, persistent campus identity, home/back controls, and configurable inactivity reset.
+- Responsive layouts for kiosk, desktop, and tablet screens.
 
-Finding a specific classroom, office, or building can be challenging for students and visitors who are unfamiliar with the campus. BarkTrack addresses this problem through a centralized, touchscreen-friendly map kiosk that allows users to search for destinations and view their locations on a digital campus map.
+The NU official contact directory publishes a general Main address and lists Main, Annex 1, and Annex 2 Mendiola, but the public source reviewed does not provide verified pedestrian connections or exact navigation entrances. Details and decisions are documented in [the source review](docs/reports/official-location-source-review.md).
 
-The system aims to simplify wayfinding by providing organized campus information and visual directions to help users reach their destinations.
+## Run locally
 
-## 🎯 Objectives
+Requirements: Node.js 20.19+ or 22.12+ and npm.
 
-- Provide an interactive digital map of the NU campus.
-- Allow users to search for specific rooms, buildings, and facilities.
-- Display the locations of classrooms, laboratories, administrative offices, and other campus destinations.
-- Provide visual directions to selected destinations, based on available campus map data.
-- Improve the navigation experience for students, faculty, staff, and visitors.
+```powershell
+cd frontend
+npm install
+npm run dev
+```
 
-## ✨ Proposed Features
+Open the local URL printed by Vite. To create a production build:
 
-### 1. Interactive Campus Map
-- Display a digital map of the campus.
-- Identify buildings, entrances, and important landmarks.
-- Allow users to explore available campus locations.
-- Highlight selected destinations on the map.
+```powershell
+npm run build
+npm run preview
+```
 
-### 2. Room and Building Finder
-- Search by room number, building name, office, or facility.
-- Display matching search results.
-- Show the building and floor associated with a room when the information is available.
-- Help users identify their destinations without manually exploring the entire map.
-
-### 3. Visual Route Guidance
-- Display directions from the kiosk or a designated starting point to the selected destination.
-- Highlight the intended route on the campus map when route data is available.
-- Provide clear visual guidance for navigating between campus locations.
-
-### 4. Campus Directory
-- Organize buildings, classrooms, laboratories, offices, and student facilities.
-- Display relevant location details and descriptions.
-- Include restrooms, elevators, entrances, and accessibility facilities where verified information is available.
-
-### 5. Touchscreen-Friendly Interface
-- Provide a simple and intuitive interface suitable for public kiosks.
-- Include a search bar, map controls, and destination details.
-- Offer clear navigation and an easy way to return to the home screen.
-
-### 6. Bulldog-Inspired Branding
-- Incorporate Bulldog-inspired graphics and NU-themed visual elements.
-- Use a modern, consistent interface that reflects the project's identity.
-- Make BarkTrack recognizable as a campus navigation companion.
-
-## 👥 Target Users
-
-- **Students:** Find classrooms, laboratories, and campus facilities.
-- **Freshmen and transferees:** Familiarize themselves with the campus.
-- **Faculty and staff:** Locate offices and university facilities.
-- **Visitors and guests:** Navigate the campus more independently.
-
-## 🔄 System Workflow
-
-1. The user approaches the BarkTrack kiosk.
-2. The user searches for a room, building, office, or facility.
-3. BarkTrack displays matching destinations.
-4. The user selects the desired location.
-5. The system highlights the destination and displays available directions.
-6. The user follows the displayed route to reach the destination.
-
-## 🛠️ Proposed Technology Stack
-
-The final technologies will depend on the implementation requirements.
-
-| Component | Proposed Technologies |
-|---|---|
-| Frontend | HTML, CSS, JavaScript, or React |
-| Map Interface | Interactive campus map or mapping library |
-| Backend | Node.js and Express.js, if required |
-| Database | PostgreSQL or MySQL, if required |
-| Deployment | Kiosk-compatible computer or web deployment |
-| Hardware | Touchscreen display or kiosk computer |
-
-## 🗂️ Information Structure
-
-Campus information may be organized into the following hierarchy:
-
-- Campus
-  - Buildings
-    - Floors
-      - Rooms and classrooms
-  - Laboratories
-  - Administrative offices
-  - Student services
-  - Common areas
-  - Accessibility facilities
-
-The actual structure will depend on the campus layout and the availability of verified university information.
-
-## 🚧 Project Status
-
-**Status:** Proposed / In Development
-
-BarkTrack is a student project concept intended to improve campus wayfinding at National University. Its final features and supported destinations will depend on implementation progress, available campus data, and any necessary university authorization.
-
-## 🔮 Future Enhancements
-
-- QR codes for transferring directions to a mobile device.
-- Floor-specific maps for multilevel buildings.
-- Accessible route options for users with mobility needs.
-- An administrative dashboard for updating room and facility information.
-- Campus announcements and directory updates.
-- Support for additional NU campuses.
-
-## 🤝 Contributions
-
-Team members may contribute to interface design, frontend development, campus map preparation, directory management, testing, and documentation. All contributions should follow the team's agreed design and implementation requirements.
-
-## ⚠️ Disclaimer
-
-BarkTrack is an independent student project concept and is not an official National University system unless formally authorized by the university. Campus maps, room assignments, and facility information should be verified with authorized university sources before deployment.
-
----
-
-**BarkTrack — Sniff Out Your Destination.** 🐶
-
----
+The prototype is frontend-only. It does not require accounts, a backend, a database, or environment variables.
 
 ## Repository layout
 
@@ -137,15 +45,32 @@ BarkTrack is an independent student project concept and is not an official Natio
 .
 ├── .agents/       # Agent guidance
 ├── .github/       # Collaboration templates and workflows
-├── .vscode/       # Shared editor recommendations
-├── backend/       # Optional destination API/admin service
-├── data/          # Authorized map notes and synthetic fixtures
-├── deployment/    # Kiosk or web deployment planning
-├── docs/          # Overview, architecture, decisions, and roadmap
-├── frontend/      # Touchscreen kiosk interface
-├── map/           # Map layers and route representation
-├── routing/       # Navigation flow and route guidance notes
-└── tests/         # Verification plans and future tests
+├── backend/       # Optional future destination API/admin service
+├── data/          # Campus and destination catalog (sample content)
+├── deployment/    # Kiosk deployment planning
+├── docs/          # Overview, architecture, decisions, roadmap, research
+├── frontend/      # React + TypeScript kiosk application
+├── map/           # Map coordinate and geometry helpers
+├── routing/       # Indoor sample routes and future verified outdoor routing
+└── tests/          # Verification plans and future automated tests
 ```
 
-See [docs/project_structure.md](docs/project_structure.md) and [docs/onboarding.md](docs/onboarding.md) for details. The implementation stack remains undecided.
+See [docs/onboarding.md](docs/onboarding.md), [docs/project_structure.md](docs/project_structure.md), and [LOCAL_PREVIEW.md](LOCAL_PREVIEW.md).
+
+## Data accuracy
+
+- Keep destinations structured in `data/campuses.ts` with a campus ID, building, floor, category, and map position.
+- Mark mock records as samples. Do not invent real room positions, floor plans, routes, entrance points, distances, travel times, or accessibility attributes.
+- Treat the current indoor route line and instructions as interface samples only.
+- Keep outdoor navigation separate from indoor floor-plan navigation. Enable outdoor guidance only after verifying building endpoints and route data.
+- Do not collect unnecessary visitor information. The kiosk timeout clears the visitor's selections and query.
+
+## Status and scope
+
+The app is a working interaction prototype, not a production wayfinding service. Map rights, verified indoor information, outdoor route data, target kiosk hardware, accessibility evaluation, and official deployment authorization remain open. Future administrative tools must be authenticated and restricted to authorized maintainers.
+
+**BarkTrack — Sniff Out Your Destination.**
+
+
+
+

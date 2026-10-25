@@ -15,9 +15,11 @@
 | `docs/prompts/` | Reusable project prompts, without private information. |
 | `docs/reports/` | Research and evaluation notes. |
 | `docs/tasks/` | Scoped tasks with acceptance criteria. |
-| `frontend/` | Kiosk search, map, destination details, and admin screens. |
-| `map/` | Map rendering, layer conventions, and route graph notes. |
-| `routing/` | Navigation flows and route-generation contract notes. |
+| `frontend/` | Kiosk pages and reusable interface components, including the map renderer. |
+| `map/` | Map coordinate conversions and geometry helpers; UI map renderer is in `frontend/src/components/`. |
+| `routing/` | Indoor sample route helpers and future verified outdoor routing logic. |
 | `tests/` | Verification plans and future automated tests. |
 
 These are proposed ownership areas, not a mandate for a particular language or framework. Remove placeholders or add area-specific READMEs as implementation begins.
+
+

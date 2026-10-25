@@ -1,3 +1,5 @@
-﻿# Data and maps
+﻿# Campus and destination data
 
-Use authorized, attributable campus data only. Record source, permission/licensing, date obtained, coverage, and verification status for each map or directory dataset. Keep fictional development fixtures separate and label them clearly. Do not commit restricted or personal data.
+The current entries in `campuses.ts` are synthetic interface fixtures. They are not verified NU information. Keep all searchable destinations structured with a `campusId`, building, floor, category, map position, and verification status. Search must be restricted to the active campus.
+
+Before adding real information, record source, authorization, license/permission, verification date, and responsible updater. Do not invent room positions or route geometry. Private or restricted campus data must not be committed.
