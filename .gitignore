@@ -1,0 +1,28 @@
+﻿# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+.next/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local or unverified map data
+data/local/
+data/private/
+
+# Editors and OS
+.vscode/*.local.json
+.idea/
+.DS_Store
+Thumbs.db
+

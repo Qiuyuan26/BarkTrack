@@ -128,3 +128,24 @@ BarkTrack is an independent student project concept and is not an official Natio
 ---
 
 **BarkTrack — Sniff Out Your Destination.** 🐶
+
+---
+
+## Repository layout
+
+```text
+.
+├── .agents/       # Agent guidance
+├── .github/       # Collaboration templates and workflows
+├── .vscode/       # Shared editor recommendations
+├── backend/       # Optional destination API/admin service
+├── data/          # Authorized map notes and synthetic fixtures
+├── deployment/    # Kiosk or web deployment planning
+├── docs/          # Overview, architecture, decisions, and roadmap
+├── frontend/      # Touchscreen kiosk interface
+├── map/           # Map layers and route representation
+├── routing/       # Navigation flow and route guidance notes
+└── tests/         # Verification plans and future tests
+```
+
+See [docs/project_structure.md](docs/project_structure.md) and [docs/onboarding.md](docs/onboarding.md) for details. The implementation stack remains undecided.
